@@ -1,0 +1,11 @@
+%backgroundimage {
+    min-height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(./resources/images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    @include background-size(cover);
+}

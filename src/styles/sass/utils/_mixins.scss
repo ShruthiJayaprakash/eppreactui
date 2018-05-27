@@ -1,0 +1,18 @@
+@mixin border($color) {
+    border: 1px solid $color;
+}
+
+@mixin background-size($value){
+    -webkit-background-size: $value;
+    -moz-background-size: $value;
+    -o-background-size: $value;
+    background-size: $value;
+}
+
+@mixin filter($value){
+    -webkit-filter: blur($value);
+    -moz-filter: blur($value);
+    -o-filter: blur($value);
+    -ms-filter: blur($value);
+    filter: blur($value);
+}

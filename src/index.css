@@ -1,0 +1,236 @@
+.login-container, .portal-container .portal-background {
+  min-height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(./resources/images/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.login-container #login-header {
+  margin-top: 20px;
+  margin-left: 140px;
+  color: #fff; }
+
+.login-container .login-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border: 1px solid #7ea831;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-left: 140px;
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.4); }
+  .login-container .login-form-container #login-form-header {
+    background-color: #7ea831;
+    color: #fff;
+    border-radius: 19px 19px 0 0; }
+    .login-container .login-form-container #login-form-header #login-form-h3 {
+      margin-top: 0;
+      padding: 10px;
+      text-align: center;
+      width: 301px; }
+  .login-container .login-form-container #login-form-body {
+    padding: 0px 50px 20px; }
+    .login-container .login-form-container #login-form-body .formcls {
+      margin-top: 10px; }
+
+/* Change styles for login screens on extra different screen */
+@media screen and (max-width: 1023px) {
+  .login-container {
+    width: 100%; }
+    .login-container img {
+      width: 100%; }
+    .login-container .login-form-container {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto; } }
+
+@media screen and (max-width: 769px) {
+  .login-container {
+    width: 100%; }
+    .login-container img {
+      width: 100%; }
+    .login-container .login-form-container {
+      width: 50%;
+      height: 100%;
+      margin: 0 auto; }
+      .login-container .login-form-container .form-control {
+        width: 60%; } }
+
+@media screen and (max-width: 640px) {
+  .login-container {
+    width: 100%; }
+    .login-container img {
+      width: 100%; }
+    .login-container #login-header {
+      margin: 0 auto; }
+    .login-container .login-form-container {
+      width: 80%;
+      height: 100%;
+      margin: 0 auto; }
+      .login-container .login-form-container .form-control {
+        width: 100%; } }
+
+.navbar-default {
+  background: #7ea831; }
+  .navbar-default .navbar-brand {
+    text-shadow: none;
+    color: #fff; }
+    .navbar-default .navbar-brand:hover {
+      color: #506931; }
+    .navbar-default .navbar-brand:focus {
+      color: #506931; }
+  .navbar-default .navbar-nav {
+    flex-direction: row;
+    padding-left: 10px; }
+    .navbar-default .navbar-nav > li > a {
+      color: #fff; }
+      .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+        color: #506931; }
+    .navbar-default .navbar-nav .open > a {
+      background-image: none;
+      color: #506931; }
+      .navbar-default .navbar-nav .open > a:focus, .navbar-default .navbar-nav .open > a:hover, .navbar-default .navbar-nav .open > a:active {
+        color: #506931;
+        background-color: transparent; }
+    .navbar-default .navbar-nav .dropdown-menu > li > a {
+      background-image: none; }
+      .navbar-default .navbar-nav .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .dropdown-menu > li > a:hover {
+        color: #506931;
+        background-color: #cbdb2a; }
+
+@media screen and (max-width: 320px) {
+  .uploadbuttons .btn-green {
+    width: auto; } }
+
+.login-container, .portal-container .portal-background {
+  min-height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(./resources/images/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.portal-container .portal-background {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px); }
+
+.portal-container .navbar {
+  background: transparent;
+  border: none;
+  box-shadow: none; }
+
+.portal-container .portal-row-container {
+  margin-left: 150px;
+  margin-top: 80px;
+  height: 250px;
+  width: 1000px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .portal-container .portal-row-container .portal-row-img {
+    margin: auto; }
+    .portal-container .portal-row-container .portal-row-img .img-fluid {
+      width: 280px;
+      border: 3px solid #506931;
+      border-radius: 8px;
+      box-shadow: 0 5px 50px rgba(0, 0, 0, 0.4); }
+
+/* Change styles for login screens on extra different screen */
+@media screen and (max-width: 1024px) {
+  .portal-container .portal-row-container {
+    margin-left: 0px;
+    justify-content: flex-start; } }
+
+@media screen and (max-width: 411px) {
+  .portal-container .portal-row-container {
+    margin-left: 0px;
+    justify-content: flex-start;
+    width: 100%;
+    flex-direction: column; } }
+
+#modal-root {
+  position: relative;
+  z-index: 999; }
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.modal-header {
+  color: #7ea831;
+  font-weight: 600; }
+  .modal-header .close {
+    color: #7ea831;
+    opacity: unset; }
+
+@media screen and (max-width: 320px) {
+  .navbar-brand {
+    padding: 10px 5px;
+    font-size: 17px; } }
+
+.olt-container .olt-wrapper-header {
+  margin-top: 70px; }
+
+.form-control {
+  max-width: 100%;
+  width: 2000px;
+  border: 1px solid #ccc;
+  border-radius: 6px; }
+  .form-control:focus {
+    border: 1px solid rgba(58, 54, 54, 0.4);
+    box-shadow: none; }
+
+.btn-green {
+  margin-top: 5px;
+  border: 1px solid #506931;
+  border-radius: 6px;
+  color: #506931;
+  cursor: pointer;
+  background: #fff;
+  width: 100px;
+  font-size: 0.9em; }
+  .btn-green:hover {
+    color: #fff;
+    background: #506931; }
+
+.floatright {
+  float: right; }
+
+.rightradius {
+  border-radius: 6px 0 0 6px; }
+
+.leftradius {
+  border-radius: 0 6px 6px 0; }
+
+.uploadbuttons {
+  padding-top: 10px; }
+
+body, html {
+  height: 100%;
+  margin: 0; }

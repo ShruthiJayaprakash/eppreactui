@@ -1,0 +1,47 @@
+#modal-root {
+    position: relative;
+    z-index: 999;
+  }
+  
+//   .app {
+//     height: 10em;
+//     width: 10em;
+//     background: lightblue;
+//     overflow: hidden;
+//   }
+  
+  .modal {
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-header{
+    color:$midGreen;
+    font-weight: 600;
+
+    .close{
+        color:$midGreen;
+        opacity: unset;
+    }
+}
+  
+//   .modal-container {
+//     position: relative;
+//   }
+//   .modal-container .modal, .modal-container .modal-backdrop {
+//     position: absolute;
+//   }
+
+@media screen and (max-width: 320px) {
+    .navbar-brand {
+        padding: 10px 5px;
+        font-size: 17px;
+    }
+}

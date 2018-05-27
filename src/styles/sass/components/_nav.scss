@@ -1,0 +1,51 @@
+@import '../utils/variables';
+.navbar-default {
+    background: $midGreen;
+    .navbar-brand {
+        text-shadow: none;
+        color: $white;
+        &:hover {
+            color: $darkGreen;
+        }
+        &:focus {
+            color: $darkGreen;
+        }
+    }
+    .navbar-nav {
+        flex-direction: row;
+        padding-left: 10px;
+        >li>a {
+            color: $white;
+            &:hover,
+            &:focus {
+                color: $darkGreen;
+            }
+        }
+        .open>a {
+            background-image: none;
+            color: $darkGreen;
+            &:focus,
+            &:hover,
+            &:active {
+                color: $darkGreen;
+                background-color: transparent;
+            }
+        }
+        .dropdown-menu>li>a {
+            background-image: none;
+            &:focus,
+            &:hover {
+                color: $darkGreen;
+                background-color: $lightGreen;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .uploadbuttons{
+        .btn-green {
+            width: auto;
+        }
+    }
+}
