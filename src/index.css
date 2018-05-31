@@ -194,8 +194,11 @@
     padding: 10px 5px;
     font-size: 17px; } }
 
-.olt-container .olt-wrapper-header {
-  margin-top: 70px; }
+.olt-container {
+  display: flex;
+  justify-content: center; }
+  .olt-container .olt-wrapper-header {
+    margin-top: 70px; }
 
 .form-control {
   max-width: 100%;
