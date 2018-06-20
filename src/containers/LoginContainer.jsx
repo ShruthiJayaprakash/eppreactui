@@ -1,8 +1,8 @@
 import React from 'react';
 import { fetchData } from '../actions/index';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import LoginComponent from '../components/LoginComponent';
-import PortalContainer from './PortalContainer';
 import { API_HOST, API_PATH } from '../helpers/Config';
 import { clearLocalStorage, getLocalStorage } from '../helpers/Utility';
 import * as constant from '../helpers/constants';
@@ -33,7 +33,8 @@ class LoginContainer extends React.Component {
     render() {
         console.log(getLocalStorage("isLoggedIn") + "isLoggedIn in get localstorage")
         if (this.props.user && getLocalStorage("isLoggedIn")) {
-            return (<PortalContainer />
+            return (
+                <Redirect to='/portal' />
             )
         }
         return (    

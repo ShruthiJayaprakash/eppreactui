@@ -36,7 +36,6 @@ export function fetchData(url, actionType, method, params ) {
 			responseType: 'json',
 			data: params
 		}
-
 		return axios(config)
 			.then(function(response) {
 				dispatch(receiveData(actionType, response.data,params));

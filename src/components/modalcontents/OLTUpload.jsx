@@ -26,7 +26,7 @@ class OLTUpload extends React.Component {
 
                     <Button inputType="submit" clsName="btn btn-green floatright" name="submit" value="Submit" onClick={this.props.oltexcelupload} />
                 </div>
-                {this.props.isOLT && <Redirect to="/olt" />}
+                {this.props.isOLT && <Redirect to='/olt'/>}
             </section>
         )
     }
