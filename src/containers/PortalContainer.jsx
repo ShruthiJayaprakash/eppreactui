@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom'
 import ModalTemplate from '../components/modalcontents/ModalTemplate'
 import cpnimg from '../resources/images/portal/cpn.png';
 import oltimg from '../resources/images/portal/olt.png';
@@ -67,7 +68,7 @@ class PortalContainer extends React.Component {
                             {this.state.show && <ModalTemplate show={this.state.show} app={this.state.app} onHide={this.handleClose} />}
                         </div>
                     </section>
-                </main> : null}
+                </main> : <Redirect to='/error'/>}
             </div>
         )
     }

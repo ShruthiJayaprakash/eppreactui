@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, withRouter  } from 'react-router-dom'
+import { Switch, Route, withRouter, NavLink } from 'react-router-dom'
 import Home from './components/Home';
 import About from './components/About';
 import PortalContainer from './containers/PortalContainer';
@@ -16,6 +16,7 @@ class Router extends React.Component {
         <Route exact path='/home' component={Home}/>
         <Route exact path='/about' component={About}/>
         <Route exact path='/portal' component={PortalContainer}/>
+        <Route exact path='/error' render={()=><div><h1>You are not logged in. Login to access the application.</h1><NavLink to='/login'>click here to login</NavLink></div>}/>
     </Switch>);
     }
 }
