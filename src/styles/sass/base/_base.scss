@@ -23,6 +23,23 @@
     }
 }
 
+.btn-lightgreen {
+    margin-top: 5px;
+    @include border($lightGreen);
+    border-radius: 6px;
+    color: $black;
+    cursor: pointer;
+    background: $lightGreen;
+    width: 100px;
+    font-size: 0.9em;
+    padding: 3px 6px;
+    &:hover {
+        color: $black;
+        background: $white;
+        @include border($lightGreen);
+    }
+}
+
 .floatright{
     float:right;
 }
@@ -38,3 +55,53 @@
 .uploadbuttons{
     padding-top:10px;
 }
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    // Cells
+    > thead{
+        >tr{
+            > th {
+                padding: 10px 30px;
+                line-height: 0.9rem;
+                color:$white;
+                background-color: $midGreen;
+            }
+        }
+    }
+    > tbody{
+        > tr {
+            > th,
+            > td {
+              padding: 10px 30px;
+              line-height: 0.9rem;
+              vertical-align: middle;
+              @include border($grey);
+            }
+    }
+      
+    }
+    // Bottom align for column headings
+    > thead > tr > th {
+      vertical-align: middle;
+      @include border($grey);
+    }
+    // Remove top border from thead by default
+    > caption + thead,
+    > colgroup + thead,
+    > thead:first-child {
+      > tr:first-child {
+        > th,
+        > td {
+          border-top: 0;
+
+        }
+      }
+    }
+    // Account for multiple tbody instances
+    > tbody + tbody {
+        @include border($grey);
+    }
+
+  }

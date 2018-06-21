@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import NavBarPortal from '../components/includes/NavBarPortal';
 import Button from '../components/global/Button';
 import OLTTableHeader from '../components/table/OLTTableHeader';
+import OLTTableBody from '../components/table/OLTTableBody';
 // import { getLocalStorage } from '../helpers/Utility';
 
 class OLTContainer extends React.Component {
@@ -20,6 +21,7 @@ class OLTContainer extends React.Component {
                             <thead>
                                 <OLTTableHeader />
                             </thead>
+                            <OLTTableBody />
                         </table>
                     </div>
                     <div>
