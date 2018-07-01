@@ -6,6 +6,7 @@
     "axios": "^0.18.0",
     "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
+    "font-awesome": "^4.7.0",
     "history": "^4.7.2",
     "lodash": "^4.17.5",
     "node-sass-chokidar": "^1.2.2",

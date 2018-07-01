@@ -8,6 +8,7 @@
         box-shadow: none;
     }
 }
+
 .btn-green {
     margin-top: 5px;
     @include border($darkGreen);
@@ -55,7 +56,7 @@
 .uploadbuttons{
     padding-top:10px;
 }
-
+.table-responsive {
 .table {
     width: 100%;
     max-width: 100%;
@@ -74,7 +75,7 @@
         > tr {
             > th,
             > td {
-              padding: 10px 30px;
+              padding: 5px 30px;
               line-height: 0.9rem;
               vertical-align: middle;
               @include border($grey);
@@ -105,3 +106,70 @@
     }
 
   }
+}
+
+.checkboxes{
+    label {
+      display: inline-block;
+      user-select: none;
+      position: relative;
+      width: 23px;
+      height: 23px;
+      @include border($grey);
+      @include border-radius(6px);
+    //   @include transition-duration(0.25s);
+      cursor: pointer;
+      overflow: hidden;
+      color: rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin: 0.8rem;
+      &:after {
+        content: '';
+        display: block;
+        margin-left:8px;
+        margin-top:4px;  
+        width: 7px;
+        height: 13px;
+        @include border($grey);
+        border-width: 0 4px 4px 0;
+        // @include transform(rotate(45deg)); 
+        transform: rotate(45deg);
+      }
+      &:hover {
+        @include border($darkGrey);
+        color: $darkGrey;
+      }
+      &:active {
+        // @include transition-duration(0);
+        -webkit-filter: brightness(0.8); 
+      }
+    }
+    
+    input {
+        display: none;
+      &:checked + {
+        label {
+          color: $greenCheckbox;
+        }
+        .green-background {
+          border-color: $greenCheckbox;
+          background: $greenCheckbox;
+          &:after{
+              content: '';
+              display: block;
+              margin-left:8px;
+              margin-top:4px;  
+              width: 7px;
+              height: 13px;
+              border: solid rgba(255, 255, 255, 1);
+              border-width: 0 4px 4px 0;
+              transform: rotate(45deg);
+          }
+            }
+        label {
+          @include animation(boom 0.5s ease);
+        }
+      }
+    }
+    }
+    

@@ -25,8 +25,8 @@ class OLTContainer extends React.Component {
                         </table>
                     </div>
                     <div>
-                        <Button name="run" value="RUN" />
-                        <Button name="cancel" value="CANCEL" />
+                        <Button clsName="btn btn-green" name="run" value="RUN" />
+                        <Button clsName="btn btn-green" name="cancel" value="CANCEL" />
                     </div>
                 </section>
             </main>
