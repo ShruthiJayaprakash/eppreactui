@@ -42,10 +42,18 @@ class PortalContainer extends React.Component {
         console.log(this.props.user + " this.props.user")
         console.log(this.props.isEligibleForCPNUpload + " this.props.isEligibleForCPNUpload")
         console.log(this.props.team + " this.props.team")
-
+        if (!this.props.user && !getLocalStorage("isLoggedIn")) {
+            debugger
+            console.log("in redirect to /portal")
+            return (
+                
+                <Redirect to='/error' />
+            )
+        }
+        
         return (
             <div>
-                {this.props.user && getLocalStorage("isLoggedIn") ? <main className="portal-container">
+                <main className="portal-container">
                     <section className="portal-background"></section>
                     <NavBarPortal />
                     <section>
@@ -68,7 +76,7 @@ class PortalContainer extends React.Component {
                             {this.state.show && <ModalTemplate show={this.state.show} app={this.state.app} onHide={this.handleClose} />}
                         </div>
                     </section>
-                </main> : <Redirect to='/error'/>}
+                </main> 
             </div>
         )
     }

@@ -15,7 +15,7 @@ export default class LoginComponent extends React.Component {
                     <div id="login-form-body">
                     <form className='formcls' onSubmit={this.props.isSubmitForm} >
                         <div className="form-group">
-                            <Input label="Email" idName="input_email" clsName="form-control" placeHolder="Enter Email" name="email" RequiredField={true} />
+                            <Input label="Username" idName="input_email" clsName="form-control" placeHolder="Enter UserName" name="user" RequiredField={true} />
                         </div>
                         <div className="form-group">
                             <Input label="Password" idName="input_password" clsName="form-control" inputType="password" placeHolder="Enter Password" name="password" RequiredField={true}  />

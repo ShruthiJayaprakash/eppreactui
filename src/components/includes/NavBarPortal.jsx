@@ -14,7 +14,7 @@ export default class NavBarPortal extends Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav pullRight>
-                        <NavItem eventKey={1} href="#">
+                        <NavItem eventKey={1} href="/portal">
                             Home
                         </NavItem>
                         {/* <Navbar.Link href="#">Home</Navbar.Link> */}
@@ -23,7 +23,7 @@ export default class NavBarPortal extends Component {
                             <MenuItem divider />
                             <MenuItem eventKey={3.2}>User Group : {"data"}</MenuItem>
                             <MenuItem divider />
-                            <MenuItem eventKey={3.3}>LOGOUT</MenuItem>
+                            <MenuItem eventKey={3.3} href="/login">LOGOUT</MenuItem>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>

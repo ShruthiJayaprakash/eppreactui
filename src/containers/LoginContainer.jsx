@@ -17,15 +17,16 @@ class LoginContainer extends React.Component {
     }
     hadleSubmit(e) {
         e.preventDefault();
-        console.log(e.target.email.value)
+        console.log(e.target.user.value)
         console.log(e.target.password.value)
+        const encodedString = Buffer.from(e.target.password.value).toString('base64')
         let fn = fetchData(
             API_HOST.CPN + API_PATH.CPN + 'authenticate/user',
             constant.login,
             'POST',
             {
-                "userName": "ssrikantha",
-                "password": "R29vZFdpbGxDb21lQDIwMTg="
+                "userName": e.target.user.value,
+                "password": encodedString
             }
         );
         this.props.dispatch(fn)
@@ -33,6 +34,7 @@ class LoginContainer extends React.Component {
     render() {
         console.log(getLocalStorage("isLoggedIn") + "isLoggedIn in get localstorage")
         if (this.props.user && getLocalStorage("isLoggedIn")) {
+            console.log("in redirect to /portal")
             return (
                 <Redirect to='/portal' />
             )
