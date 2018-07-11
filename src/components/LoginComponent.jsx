@@ -21,7 +21,7 @@ export default class LoginComponent extends React.Component {
                             <Input label="Password" idName="input_password" clsName="form-control" inputType="password" placeHolder="Enter Password" name="password" RequiredField={true}  />
                         </div>
                         <div className="clearfix">
-                            <Button inputType="submit" clsName="btn btn-green" name="login" value="Login" />
+                            <Button inputType="submit" clsName="btn btn-white" name="login" value="Login" />
                         </div>
                     </form>
                     </div>

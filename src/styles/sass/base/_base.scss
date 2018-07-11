@@ -9,7 +9,7 @@
     }
 }
 
-.btn-green {
+.btn-white {
     margin-top: 5px;
     @include border($darkGreen);
     border-radius: 6px;
@@ -19,6 +19,25 @@
     width: 100px;
     font-size: 0.9em;
     &:hover {
+        color: $white;
+        background: $darkGreen;
+    }
+}
+
+.btn-green {
+    margin-top: 5px;
+    @include border($darkGreen);
+    border-radius: 6px;
+    color: $white;
+    cursor: pointer;
+    background: $darkGreen;
+    width: 100px;
+    font-size: 0.9em;
+    &:hover {
+        color: $darkGreen;
+        background: $white;
+    }
+    &:focus {
         color: $white;
         background: $darkGreen;
     }
@@ -41,135 +60,125 @@
     }
 }
 
-.floatright{
-    float:right;
+.floatright {
+    float: right;
 }
 
-.rightradius{
+.rightradius {
     border-radius: 6px 0 0 6px;
 }
 
-.leftradius{
+.leftradius {
     border-radius: 0 6px 6px 0;
 }
 
-.uploadbuttons{
-    padding-top:10px;
+.uploadbuttons {
+    padding-top: 10px;
 }
+
 .table-responsive {
-.table {
-    width: 100%;
-    max-width: 100%;
-    // Cells
-    > thead{
-        >tr{
-            > th {
-                padding: 10px 30px;
-                line-height: 0.9rem;
-                color:$white;
-                background-color: $midGreen;
+    .table {
+        width: 100%;
+        max-width: 100%; // Cells
+        >thead {
+            >tr {
+                >th {
+                    padding: 10px 30px;
+                    line-height: 0.9rem;
+                    color: $white;
+                    background-color: $midGreen;
+                }
             }
         }
-    }
-    > tbody{
-        > tr {
-            > th,
-            > td {
-              padding: 5px 30px;
-              line-height: 0.9rem;
-              vertical-align: middle;
-              @include border($grey);
+        >tbody {
+            >tr {
+                >th,
+                >td {
+                    padding: 5px 30px;
+                    line-height: 0.9rem;
+                    vertical-align: middle;
+                    @include border($grey);
+                }
             }
-    }
-      
-    }
-    // Bottom align for column headings
-    > thead > tr > th {
-      vertical-align: middle;
-      @include border($grey);
-    }
-    // Remove top border from thead by default
-    > caption + thead,
-    > colgroup + thead,
-    > thead:first-child {
-      > tr:first-child {
-        > th,
-        > td {
-          border-top: 0;
-
+        } // Bottom align for column headings
+        >thead>tr>th {
+            vertical-align: middle;
+            @include border($grey);
+        } // Remove top border from thead by default
+        >caption+thead,
+        >colgroup+thead,
+        >thead:first-child {
+            >tr:first-child {
+                >th,
+                >td {
+                    border-top: 0;
+                }
+            }
+        } // Account for multiple tbody instances
+        >tbody+tbody {
+            @include border($grey);
         }
-      }
     }
-    // Account for multiple tbody instances
-    > tbody + tbody {
-        @include border($grey);
-    }
-
-  }
 }
 
-.checkboxes{
+.checkboxes {
     label {
-      display: inline-block;
-      user-select: none;
-      position: relative;
-      width: 23px;
-      height: 23px;
-      @include border($grey);
-      @include border-radius(6px);
-    //   @include transition-duration(0.25s);
-      cursor: pointer;
-      overflow: hidden;
-      color: rgba(0, 0, 0, 0.1);
-      text-align: center;
-      margin: 0.8rem;
-      &:after {
-        content: '';
-        display: block;
-        margin-left:8px;
-        margin-top:4px;  
-        width: 7px;
-        height: 13px;
+        display: inline-block;
+        user-select: none;
+        position: relative;
+        width: 23px;
+        height: 23px;
         @include border($grey);
-        border-width: 0 4px 4px 0;
-        // @include transform(rotate(45deg)); 
-        transform: rotate(45deg);
-      }
-      &:hover {
-        @include border($darkGrey);
-        color: $darkGrey;
-      }
-      &:active {
-        // @include transition-duration(0);
-        -webkit-filter: brightness(0.8); 
-      }
+        @include border-radius(6px); //   @include transition-duration(0.25s);
+        cursor: pointer;
+        overflow: hidden;
+        color: rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 0.8rem;
+        &:after {
+            content: '';
+            display: block;
+            margin-left: 8px;
+            margin-top: 4px;
+            width: 7px;
+            height: 13px;
+            @include border($grey);
+            border-width: 0 4px 4px 0; // @include transform(rotate(45deg)); 
+            transform: rotate(45deg);
+        }
+        &:hover {
+            @include border($darkGrey);
+            color: $darkGrey;
+        }
+        &:active {
+            // @include transition-duration(0);
+            -webkit-filter: brightness(0.8);
+        }
     }
-    
     input {
         display: none;
-      &:checked + {
-        label {
-          color: $greenCheckbox;
-        }
-        .green-background {
-          border-color: $greenCheckbox;
-          background: $greenCheckbox;
-          &:after{
-              content: '';
-              display: block;
-              margin-left:8px;
-              margin-top:4px;  
-              width: 7px;
-              height: 13px;
-              border: solid rgba(255, 255, 255, 1);
-              border-width: 0 4px 4px 0;
-              transform: rotate(45deg);
-          }
+        &:checked+ {
+            label {
+                color: $greenCheckbox;
             }
-        label {
-          @include animation(boom 0.5s ease);
+            .green-background {
+                border-color: $greenCheckbox;
+                background: $greenCheckbox;
+                &:after {
+                    content: '';
+                    display: block;
+                    margin-left: 8px;
+                    margin-top: 4px;
+                    width: 7px;
+                    height: 13px;
+                    border: solid rgba(255, 255, 255, 1);
+                    border-width: 0 4px 4px 0;
+                    transform: rotate(45deg);
+                }
+            }
+            label {
+                @include animation(boom 0.5s ease);
+            }
         }
-      }
     }
-    }
-    
+}

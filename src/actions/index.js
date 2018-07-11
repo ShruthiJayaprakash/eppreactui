@@ -1,7 +1,6 @@
 import * as types from '../constants/ActionTypes';
 import axios from 'axios';
 
-
 function requestData(actionType) {
 	return {type: actionType + types.REQ_DATA}
 };
@@ -9,7 +8,7 @@ function requestData(actionType) {
 function receiveData(actionType, json,params) {
 	console.log("actionType"+actionType)
 	console.log("params"+JSON.stringify(params));
-	console.log("data"+JSON.stringify(json))
+	console.log("json in receiveData"+JSON.stringify(json))
 	return{
 		type: actionType + types.RECV_DATA,
 		data: json,

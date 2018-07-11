@@ -13,7 +13,6 @@ class PortalContainer extends React.Component {
         super(props);
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
-
         this.state = {
             show: false,
             app: 'none'
@@ -36,7 +35,6 @@ class PortalContainer extends React.Component {
                 console.log("nothing to be set");
         }
     }
-
     render() {
         console.log(getLocalStorage("isLoggedIn") + " : isLoggedIn in get localstorage in portala")
         console.log(this.props.user + " this.props.user")
@@ -45,12 +43,10 @@ class PortalContainer extends React.Component {
         if (!this.props.user && !getLocalStorage("isLoggedIn")) {
             debugger
             console.log("in redirect to /portal")
-            return (
-                
+            return (  
                 <Redirect to='/error' />
             )
         }
-        
         return (
             <div>
                 <main className="portal-container">
